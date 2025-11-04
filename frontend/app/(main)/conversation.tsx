@@ -115,7 +115,7 @@ useEffect(() => {
     if (!currentUserId) return;
     setLoading(true);
     try {
-      let attachment = null;
+      let attachement = null;
       if (selectedFile) {
         const uploadResult = await uploadFileToCloudinary(
           selectedFile,
