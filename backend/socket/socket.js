@@ -13,7 +13,7 @@ export function initializeSocket(server) {
 
   const io = new SocketIOServer(server, {
     cors: {
-      origin: "http://localhost:8081",
+      origin: "https://full-stack-chat-app-react-native.onrender.com",
       methods: ["GET", "POST"]
     }
   });
