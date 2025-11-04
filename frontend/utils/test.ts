@@ -1,7 +1,7 @@
 // test-getMessages.ts
 import { io, Socket } from "socket.io-client";
 
-const socket: Socket = io("http://localhost:5000");
+const socket: Socket = io("https://chat-app-tp1p.onrender.com");
 
 socket.on("connect", () => {
   console.log("Connected to socket server");
