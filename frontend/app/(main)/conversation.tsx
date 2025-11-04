@@ -119,11 +119,11 @@ useEffect(() => {
       if (selectedFile) {
         const uploadResult = await uploadFileToCloudinary(
           selectedFile,
-          "message_attachments"
+          "message_attachement"
         );
 
         if (uploadResult.success) {
-          attachment = uploadResult.data;
+          attachement = uploadResult.data;
         } else {
           Alert.alert("Error", "Failed to upload attachment. Please try again.");
           setLoading(false);
@@ -139,10 +139,10 @@ useEffect(() => {
           avatar: currentUser.avatar,
         },
         content: message.trim(),
-        attachment,
+        attachement,
       });
 
-      console.log("attachment", attachment);
+      console.log("attachement", attachement);
       setMessage('');
       setSelectedFile(null);
 
