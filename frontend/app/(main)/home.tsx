@@ -110,7 +110,7 @@ const Home = () => {
         if (!userId || !token) return;
 
         const response = await axios.get(
-          `http://localhost:5000/api/auth/user/${userId}`,
+          `https://chat-app-tp1p.onrender.com/api/auth/user/${userId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         await getSocket();
