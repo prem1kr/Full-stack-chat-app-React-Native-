@@ -43,7 +43,7 @@ const ProfileModel = () => {
           return;
         }
 
-        const response = await axios.get(`http://localhost:5000/api/auth/user/${userId}`, {
+        const response = await axios.get(`https://chat-app-tp1p.onrender.com/api/auth/user/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -89,7 +89,7 @@ const handleSave = async () => {
     }
 
     await axios.put(
-      `http://192.168.1.3::5000/api/auth/user/${userId}`, 
+      `https://chat-app-tp1p.onrender.com/api/auth/user/${userId}`, 
       updateData,
       { headers: { Authorization: `Bearer ${token}` } }
     );
