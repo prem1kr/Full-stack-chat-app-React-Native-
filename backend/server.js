@@ -15,10 +15,11 @@ const port = process.env.PORT || 5000;
 
 
 app.use(cors({
-  origin: 'https://full-stack-chat-app-react-native.onrender.com',
+  origin: '*', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
+
 
 // listen to socket
 const server = http.createServer(app);
