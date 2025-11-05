@@ -11,12 +11,13 @@ export function initializeSocket(server) {
     throw new Error('SECRET_KEY not set in environment variables');
   }
 
-  const io = new SocketIOServer(server, {
-    cors: {
-      origin: "https://full-stack-chat-app-react-native.onrender.com",
-      methods: ["GET", "POST"]
-    }
-  });
+ const io = new SocketIOServer(server, {
+  cors: {
+    origin: "*",             
+    methods: ["GET", "POST"] 
+  }
+});
+
 
   // Middleware to authenticate socket connection
   io.use((socket, next) => {
